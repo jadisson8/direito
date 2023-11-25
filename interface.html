@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizontal</title>
+    <link rel="stylesheet" href="interface.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(160, 160, 160);
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Permite que as caixas mudem para a linha seguinte em telas menores */
+        }
+
+        .box img {
+            border-radius: 20px;
+            width: 100px; /* ajuste o tamanho conforme necessário */
+            height: 100px; /* ajuste o tamanho conforme necessário */
+            background-color: white; /* Adicione uma cor de fundo se desejar */
+            margin: 10px; /* Adicione margens conforme necessário */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.3s ease; /* Adiciona uma transição suave para a box-shadow */
+        }
+
+        .box img:hover {
+            box-shadow: 0px 0px 10px 0px black; /* Adiciona uma box-shadow quando a caixa é hover */
+        }
+
+        .box img {
+            width: 50%; /* ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+        }
+
+        .label {
+            margin-top: 5px;
+        }
+
+        /* Media query para telas menores (ex: celular) */
+        @media (max-width: 600px) {
+            .box-container {
+                flex-direction: column; /* Muda para coluna em telas menores */
+                height: 200vw;
+            }
+
+            .box img {
+                box-shadow: 0px 0px 10px 0px black; /* Adiciona uma box-shadow em telas menores */
+            }
+
+            .box img:hover {
+                box-shadow: 0px 0px 15px 0px black; /* Ajusta a box-shadow quando a caixa é hover em telas menores */
+            }
+
+            .caixa_regras {
+                box-shadow: none; /* Remove o box-shadow em dispositivos móveis */
+            }
+        }
+
+        .caixa_regras {
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px 10px black;
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .sub_titulo {
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: white; /* Adicione uma cor de fundo se desejar */
+        }
+
+        h2 {
+            color: rgba(128, 128, 128, 0.578);
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        hr {
+            width: 100%;
+            border: none;
+            height: 2px;
+            background-color: black; /* Alterado para preto para melhor visibilidade */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="paiaq.png" alt="" id="img_titulo" class="logo">
+        <h1 class="title">Quest Prev</h1>
+    </div>
+
+    <div>
+        <h2 class="sub_titulo">Dados do INSS?</h2>
+    </div>
+    <hr> <!-- Adicionado hr -->
+
+    <div class="caixa_regras">
+        <div class="box-container">
+            <div>
+                <div name="b1" class="box">
+                    <a href="#"><img src="regradepontos.jpeg" alt=""></a>
+                </div>
+                <label for="b1">Regra de pontos</label>
+            </div>
+            <div>
+                <div name="b2" class="box">
+                    <a href="#"><img src="redução do tempo.jpeg" alt=""></a>
+                </div>
+                <label for="b2">redução do tempo de <br> contribuitção</label>
+            </div>
+            <div>
+                <div name="b3" class="box">
+                    <a href="#"><img src="idade progressiva.jpeg" alt=""></a>
+                </div>
+                <label for="b3">idade progressiva</label>
+            </div>
+            <div>
+                <div name="b4" class="box">
+                    <a href="#"><img src="pedagio50.jpeg" alt=""></a>
+                </div>
+                <label for="b4">Pedágio 50%</label>
+            </div>
+            <div>
+                <div name="b5" class="box">
+                    <a href="#"><img src="pedagio100.jpeg" alt=""></a>
+                </div>
+                <label for="b5">Pedágio 100%</label>
+            </div>
+        </div>
+    </div>
+
+    <nav id="menu-h">
+        <ul>
+            <li><a href="interface.html"><img class="imagem" src="i.jpeg" alt=""></a></li>
+            <li><a href="explorar.html"><img class="imagem" src="e.jpeg" alt=""></a></li>
+            <li><a href="agendamento.html"><img class="imagem" src="c.jpeg" alt=""></a></li>
+            <li><a href="perfil.html"><img class="imagem" src="p.jpeg" alt=""></a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

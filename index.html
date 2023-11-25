@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Prev</title>
+    <style>
+        body, div, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, em, img, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(160, 160, 160);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-image: url(natureza.avif);
+            background-attachment: fixed;
+        }
+        .centralizar{
+            width: 100vw;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @media only screen and (max-width: 600px) {
+        body {
+        background-size: 100% 100%; /* Ajustar a imagem para cobrir 100% da largura e altura */
+        }
+        }
+    
+        #titulo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        #centro {
+            margin: 2vh 5vw;
+            box-shadow: 5px 5px 5px rgb(0, 0, 0);
+            padding: 5vw;
+            width: 90vw;
+            max-width: 600px;
+            border-radius: 5vw;
+            background-color: #3e1c10;
+        }
+    
+        form {
+            width: 100%;
+        }
+    
+        input {
+            border-radius: 20px;
+            height: 4vh;
+            width: 100%;
+            box-shadow: 5px 5px 5px black;
+        }
+    
+        button {
+            height: 5vh;
+            width: 100%;
+            border-radius: 20px;
+            background-color: white;
+        }
+    
+        h1 {
+            font-family: Arial;
+            color: black;
+        }
+    
+        img {
+            width: 80px;
+            height: 80px;
+            max-width: 100%;
+        }
+    
+        p {
+            margin-top: 20px;
+            font-family: Arial;
+            text-align: center;
+            font-size: 2vw;
+            color: rgba(0, 0, 0, 0.822);
+        }
+    
+        a {
+            text-decoration: none;
+        }
+    
+        @media only screen and (max-width: 600px) {
+            #centro {
+                margin: 5vw;
+                padding: 5vw;
+                border-radius: 5vw;
+            }
+    
+            p {
+                font-size: 3vw;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div id="titulo">
+        <img src="paiaq.png" alt="Logo">
+        <h1>Quest Prev</h1>
+    </div>
+
+    <div class="centralizar">
+        <div id="centro">
+            <form id="loginForm">
+                <input name="E-mail/Telefone" type="text" placeholder="E-mail/Telefone" required>
+                <br><br>
+                <input type="password" placeholder="Senha" required>
+                <br><br>
+                <button type="submit" id="acessar">Acessar</button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <p>Não tem uma conta? Toque <a href="cadastro.html">aqui</a> para criar a sua</p> 
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
+
+
+

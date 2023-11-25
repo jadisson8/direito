@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizontal</title>
+    <link rel="stylesheet" href="interface.css">
+    <style>
+        #ico {
+            width: 400px;
+            height: 400px;
+        }
+        .box{
+            font-family: Arial, Helvetica, sans-serif;
+            color: whitesmoke;
+            display: flex;
+            background-image: linear-gradient(to right, black, gray)
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Meu perfil</h1>
+    <hr>
+    <div id="centro">
+        <!-- As informações dos campos de entrada do primeiro código serão inseridas aqui -->
+    </div>
+    <div>
+        <img src="qprevicon.jpeg" id="ico" alt="">
+    </div>
+
+    <div id="centro">
+    </div>
+<hr>
+    <nav id="menu-h">
+        <ul>
+            <li><a href="interface.html"><img class="imagem" src="i.jpeg" alt=""></a></li>
+            <li><a href="explorar.html"><img class="imagem" src="e.jpeg" alt=""></a></li>
+            <li><a href="agendamento.html"><img class="imagem" src="c.jpeg" alt=""></a></li>
+            <li><a href="perfil.html"><img class="imagem" src="p.jpeg" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Recupera os dados do localStorage
+            const emailTelefone = localStorage.getItem('emailTelefone');
+            const senha = localStorage.getItem('senha');
+    
+            // Verifica se os dados existem
+            if (emailTelefone && senha) {
+                // Exibe os dados na página
+                const centroElement = document.getElementById('centro');
+                const infoElement = document.createElement('div');
+                infoElement.innerHTML = `
+                    <h3 class="box">Email/Telefone: ${emailTelefone}</h3>
+                    <h3 class="box">Senha: ${senha}</h3>
+                `;
+                centroElement.appendChild(infoElement);
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

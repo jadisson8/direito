@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <style>
+    body {
+            margin: 0; /* Remover margens em todas as páginas */
+        }
+
+        p {
+            margin-top: 20px; /* Espaçamento acima do parágrafo */
+            font-family: Arial;
+            text-align: center;
+            font-size: 2vw;
+            color: rgba(0, 0, 0, 0.822);
+        }
+
+        *{
+            margin: 0px;
+             padding: 0px;
+        }
+        body {
+            background-color: rgba(160, 160, 160);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-image: url(natureza.avif);
+            background-attachment: fixed;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            body {
+                background-size: auto;
+            }
+        }
+        
+        #titulo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #centro {
+            margin: 2vh 5vw;
+            box-shadow: 5px 5px 5px rgb(0, 0, 0);
+            padding: 5vw;
+            width: 90vw;
+            max-width: 600px;
+            border-radius: 5vw;
+            background-color: #3e1c10;
+        }
+        
+        form {
+            width: 100%;
+        }
+        
+        input {
+            border-radius: 20px;
+            height: 4vh;
+            width: 100%;
+            box-shadow: 5px 5px 5px black;
+        }
+        
+        button {
+            height: 5vh;
+            width: 100%;
+            border-radius: 20px;
+            background-color: white;
+        }
+        
+        h1 {
+            font-family: Arial;
+            color: black;
+            text-align: center;
+        }
+        
+        img {
+            width: 80px;
+            height: 80px;
+            max-width: 100%;
+        }
+        
+        
+        a {
+            text-decoration: none;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            #centro {
+                margin: 5vw;
+                padding: 5vw;
+                border-radius: 5vw;
+            }
+        
+            p {
+                font-size: 3vw;
+            }
+        }
+  </style>
+</head>
+<body id="body">
+  <form class="centralizar" id="myForm" onsubmit="return validateForm()">
+    <h1>Cadastro</h1>
+    <input name="insert" type="text" placeholder="Nome" required>
+    <br>
+    <input name="insert" type="email" placeholder="E-mail/Telefone" required>
+    <br>
+    <input name="insert" type="tel" placeholder="Telefone" required>
+    <br>
+    <input name="insert" type="number" placeholder="CPF" required>
+    <br>
+    <input name="insert" type="password" placeholder="Senha" required>
+    <br>
+    <input type="submit" id="btncadastro">
+  </form>
+
+  <hr id="hrcad">
+  <div>
+    <p>Voltar para tela de login <a href="index.html">aqui</a></p> 
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

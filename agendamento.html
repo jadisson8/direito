@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="interface.css">
+    <style>
+        h1 {
+            background-color: black;
+            height: 50px;
+        }
+
+        .button-container {
+            margin-top: 10px;
+        }
+
+        .button-container button {
+            margin-right: 10px;
+            height: 30px;
+            width: 90px;
+            border-radius: 40px;
+            background-color: aqua;
+        }
+
+        .hidden {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .button-container:hover .hidden {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agendar consulta</h1>
+
+    <div class="button-container">
+        <label for="btn1">Consulta Dr(a)</label>
+        <button name="btn1" class="agend" onclick="mostrarListaSecundaria('listaSecundaria1')">Informações</button>
+        <ul id="listaSecundaria1" class="hidden">
+            <li>Informação 1</li>
+            <li>Informação 2</li>
+            <li>Informação 3</li>
+            <button class="agend" onclick="realizarAgendamento('Mensagem1')">Agendar</button>
+        </ul>
+    </div>
+    <hr>
+    <div class="button-container">
+        <label for="btn1">Consulta Dr(a)</label>
+        <button class="agend" onclick="mostrarListaSecundaria('listaSecundaria2')">Informações</button>
+        <ul id="listaSecundaria2" class="hidden">
+            <li>Informação 1</li>
+            <li>Informação 2</li>
+            <li>Informação 3</li>
+            <button class="agend" onclick="realizarAgendamento('Mensagem2')">Agendar</button>
+        </ul>
+    </div>
+    <hr>
+    <div class="button-container">
+        <label for="btn1">Consulta Dr(a)</label>
+        <button class="agend" onclick="mostrarListaSecundaria('listaSecundaria3')">Informações</button>
+        <ul id="listaSecundaria3" class="hidden">
+            <li>Informação 1</li>
+            <li>Informação 2</li>
+            <li>Informação 3</li>
+            <button class="agend" onclick="realizarAgendamento('Mensagem3')">Agendar</button>
+        </ul>
+    </div>
+    <hr>
+    <nav id="menu-h">
+        <ul>
+            <li><a href="interface.html"><img  class="imagem" src="i.jpeg" alt=""></a></li>
+            <li><a href="explorar.html"><img class="imagem" src="e.jpeg" alt=""></a></li>
+            <li><a href="agendamento.html"><img class="imagem" src="c.jpeg" alt=""></a></li>
+            <li><a href="perfil.html"><img class="imagem"s src="p.jpeg" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function mostrarListaSecundaria(idLista) {
+            var listaSecundaria = document.getElementById(idLista);
+            listaSecundaria.classList.toggle('hidden');
+        }
+
+        function realizarAgendamento(idMensagem) {
+            var mensagem = document.getElementById(idMensagem);
+            alert('Agendamento realizado com sucesso.');
+        }
+    </script>
+</body>
+</html>
